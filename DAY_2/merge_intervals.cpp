@@ -15,7 +15,6 @@ int main()
     }
     sort(v.begin(), v.end());
     vector<pair<int, int>> s;
-    int c = 0;
     s.push_back({v[0].first, v[0].second});
     for (int i = 1; i < n; i++)
     {
