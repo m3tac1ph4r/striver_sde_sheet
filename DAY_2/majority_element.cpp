@@ -23,4 +23,25 @@ int main()
 
 /*
 Code Link : https://leetcode.com/problems/majority-element/
+
+Another Code (Using Moore's Voting Algorithm)
+
+int majority(vector<int> nums)
+{
+    int count = 0;
+    int candidate = 0;
+
+    for (int num : nums)
+    {
+        if (count == 0)
+        {
+            candidate = num;
+        }
+        if (num == candidate)
+            count += 1;
+        else
+            count -= 1;
+    }
+    return candidate;
+}
 */
