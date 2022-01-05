@@ -38,4 +38,21 @@ int main()
 /*
 The above question is solved using Dynamic Programming
 https://leetcode.com/problems/unique-paths/
+
+T.C. : O(m*n)
+S.C. : O(m*n)
+
+other optimised solution is:
+
+finding (m+n-2)C(m-1) or (m+n-2)C(n-1)
+
+Code :
+int N=m+n-2;
+int res=1;
+int r=m-1;
+for(int i=1;i<=r;i++)
+{
+    res=res*(N-r+i)/i;
+}
+return res;
 */
