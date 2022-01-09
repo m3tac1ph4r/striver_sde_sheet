@@ -27,7 +27,31 @@ ListNode *reverseList(ListNode *head)
     head=prev;
     return head;
 }
-
+void insertTail(ListNode* &head,int val)
+{
+    ListNode* tmp=new ListNode(val);
+    if(head==NULL)
+        head=tmp;
+    else
+    {
+        ListNode* n=head;
+        while(n->next!=NULL)
+        {
+            n=n->next;
+        }
+        n->next=tmp;
+    }
+    
+}
+void display(ListNode* head)
+{
+    while (head!=NULL)
+    {
+        cout<<head->val<<" ";
+        head=head->next;
+    }
+    
+}
 int main()
 {
     ListNode* head=new ListNode();
