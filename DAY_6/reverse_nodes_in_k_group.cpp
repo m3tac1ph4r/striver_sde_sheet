@@ -38,6 +38,12 @@ void display(ListNode *head)
     }
     cout << "\n";
 }
+
+/*
+This is function will only reverse  k nodes 
+input: 1 2 3 4 5   K=3
+output: 3 2 1 4 5
+*/
 ListNode* reverse(ListNode* head,int k,int length)
 {
     ListNode *next_p;
@@ -60,6 +66,36 @@ ListNode* reverse(ListNode* head,int k,int length)
     }
     return prev;
 }
+
+/*
+This is function will reverse less than k nodes also
+input: 1 2 3 4 5 K=3
+output: 3 2 1 5 4
+*/
+ListNode *reverse(ListNode *head, int k)
+{
+    ListNode *next_p;
+    ListNode *prev = NULL;
+    ListNode *curr = head;
+    int c = 0;
+    int count = 0;
+    ListNode *temp = head;
+    while (curr != NULL and c < k)
+    {
+        next_p = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next_p;
+        c++;
+    }
+    if (curr != NULL)
+    {
+        head->next = reverse(next_p, k);
+    }
+    return prev;
+}
+
+
 ListNode *reverseKGroup(ListNode *head, int k)
 {
     ListNode* temp=head;
@@ -70,6 +106,7 @@ ListNode *reverseKGroup(ListNode *head, int k)
         temp=temp->next;
     }
     return reverse(head,k,length);
+    // return reverse(head, k);
 }
 int main()
 {
