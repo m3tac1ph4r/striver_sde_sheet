@@ -46,6 +46,8 @@ output: 3 2 1 4 5
 */
 ListNode* reverse(ListNode* head,int k,int length)
 {
+    if(length<k)
+        return head;
     ListNode *next_p;
     ListNode *prev = NULL;
     ListNode *curr = head;
@@ -117,7 +119,7 @@ int main()
     insertTail(head, 4);
     insertTail(head, 5);
     display(head);
-    ListNode* temp=reverseKGroup(head,2);
+    ListNode* temp=reverseKGroup(head,3);
     display(temp);
     return 0;
 }
