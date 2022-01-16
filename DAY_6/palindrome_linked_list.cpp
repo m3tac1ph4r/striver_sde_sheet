@@ -88,12 +88,12 @@ int main()
 https://leetcode.com/problems/palindrome-linked-list/
 
 Approach:
-1. Firstly Find mid node 
+1. Firstly Find mid node
 2. Then reverse the list after mid
 3. Then check the value of head linked_list and reverse_head(prev) linked_list
     ex: 10203
-    mid:-2
+    mid: 2
     Now modifies list will be: 10302
-    Now we will we will travese from 3 to 2 and 1 to 3
+    Now we will we will travese from 1 to 3 and 3 to 2.
     And check whether values are same or not.
 */
