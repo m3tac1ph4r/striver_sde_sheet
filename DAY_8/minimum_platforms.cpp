@@ -9,33 +9,16 @@ bool comp(vector<int> a,vector<int> b)
 }
 int findPlatform(int arr[],int dep[],int n)
 {
-    vector<vector<int>> v;
-    for(int i=0;i<n;i++)
-        v.push_back({arr[i],dep[i]});
-    sort(v.begin(),v.end(),comp);
-    int platform=1;
-    // int i=0,j=1;
-    // while(j<n)
-    // {
-    //     if(v[i][1]<v[j][0])
-    //     {
-    //         i=j;
-    //         j++;
-    //     }
-    //     else
-    //     {
-    //         platform++;
-    //         j++;
-    //     }
-    // }
-    int end=v[0][1];
-    for(int i=1;i<n;i++)
+    sort(arr,arr+n);
+    sort(dep,dep+n);
+    int platform=1,i=1,j=0;
+    while (i<n and j<n)
     {
-        if(v[i][0]<end)
-        {
+        if (arr[i]<=dep[j])
             platform++;
-        }
-        end=min(end,v[i][1]);
+        else
+            j++;
+        i++;       
     }
     return platform;
 }
