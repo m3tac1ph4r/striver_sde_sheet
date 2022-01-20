@@ -3,10 +3,6 @@ using namespace std;
 #define ll long long
 const int M=1e9+7;
 
-bool comp(vector<int> a,vector<int> b)
-{
-    return a[1]<b[1];
-}
 int findPlatform(int arr[],int dep[],int n)
 {
     sort(arr,arr+n);
