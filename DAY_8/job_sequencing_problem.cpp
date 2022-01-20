@@ -53,3 +53,7 @@ int main()
     cout<<ans[0]<<" "<<ans[1]<<"\n";
     return 0;
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#
+*/
