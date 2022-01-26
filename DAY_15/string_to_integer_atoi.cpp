@@ -33,3 +33,16 @@ int main()
     cout<<myAtoi(s);   
     return 0;
 }
+
+/*
+https://leetcode.com/problems/string-to-integer-atoi/
+
+INPUT               OUTPUT
+   -15              -15
+456abcd             456
+abcd125             0
++15                 15
+if(ans>INT_MAX)     return INT_MAX
+if(ans<INT_MIN)     return INT_MIN
+
+*/
