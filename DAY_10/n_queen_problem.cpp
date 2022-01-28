@@ -14,7 +14,7 @@ bool isSafe(int row,int col,vector<string> board,int n)
         duprow--;dupcol--;
     }
 
-    // LEFT DIAGONAL
+    // LEFT ROW
     duprow=row;dupcol=col;
     while(dupcol>=0)
     {
