@@ -81,4 +81,7 @@ int main()
 https://leetcode.com/problems/n-queens/
 
 Bruteforce approach
+
+Time Complexity : O(n^3)
+Space Complexity : O(n^2)
 */
