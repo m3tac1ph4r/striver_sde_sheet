@@ -53,6 +53,8 @@ int main()
 /*
 https://www.interviewbit.com/problems/matrix-median/#
 
+Median Row Sorted Array
+
 Solved Using Binary Search
 
 IF we have to find mid value in range like 10 to 2000 then formula used :
