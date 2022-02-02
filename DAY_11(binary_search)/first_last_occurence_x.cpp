@@ -62,3 +62,7 @@ int main()
         cout<<ans[0]<<" ";
     return 0;
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#
+*/
