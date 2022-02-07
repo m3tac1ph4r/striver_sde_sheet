@@ -54,6 +54,7 @@ int main()
 
 /*
 https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
+https://www.spoj.com/problems/AGGRCOW/
 
 INPUT:
 5 2
@@ -72,7 +73,7 @@ OUPUT:
 4
 the largest minimum distance will be 4 when 3 cows are placed at positions {0, 4, 10}.
 
-We will take start=0 and end=stalls[n-1] and will find the mid. If all cows are successfully placed 
+We will take start=0 and end=stalls[n-1] and will find the mid. If all cows are successfully placed
 at that minimum distance. Now we will increase the start=mid+1. Because we have to find maximum.
 
 */
