@@ -56,3 +56,7 @@ int main()
     cout<<books(A,B);
     return 0;
 }
+
+/*
+https://www.interviewbit.com/problems/allocate-books/
+*/
