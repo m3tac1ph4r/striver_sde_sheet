@@ -27,6 +27,8 @@ bool isPossible(vector<int> &A,int mid,int B)
 }    
 int books(vector<int> &A,int B)
 {
+    if(B>A.size())
+        return -1;
     int start=0,sum=0,end=0,ans=-1;
     for(int i=0;i<A.size();i++)
         sum+=A[i];
