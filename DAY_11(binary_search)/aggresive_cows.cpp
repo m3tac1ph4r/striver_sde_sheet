@@ -55,6 +55,7 @@ int main()
 /*
 https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
 https://www.spoj.com/problems/AGGRCOW/
+https://www.codingninjas.com/codestudio/problems/chess-tournament_981299
 
 INPUT:
 5 2

@@ -59,4 +59,22 @@ int main()
 
 /*
 https://www.interviewbit.com/problems/allocate-books/
+
+For Example
+
+Input 1:
+    A = [12, 34, 67, 90]
+    B = 2
+Output 1:
+    113
+Explanation 1:
+    There are 2 number of students. Books can be distributed in following fashion :
+        1) [12] and [34, 67, 90]
+        Max number of pages is allocated to student 2 with 34 + 67 + 90 = 191 pages
+        2) [12, 34] and [67, 90]
+        Max number of pages is allocated to student 2 with 67 + 90 = 157 pages
+        3) [12, 34, 67] and [90]
+        Max number of pages is allocated to student 1 with 12 + 34 + 67 = 113 pages
+
+        Of the 3 cases, Option 3 has the minimum pages = 113.
 */
