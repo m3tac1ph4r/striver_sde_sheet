@@ -21,8 +21,7 @@ bool woodRequired(vector<int> tree,int mid,int m,int n)
 int solve(vector<int> tree,int n,int m)
 {
     int low=0,high=0,ans;
-    for(int i=0;i<n;i++)
-        high+=tree[i];
+    high=*max_element(tree.begin(),tree.end());
     while (low<=high)
     {
         int mid=low+(high-low)/2;
@@ -46,3 +45,7 @@ int main()
     cout<<solve(tree,n,m)<<"\n";
     return 0;
 }
+
+/*
+https://www.spoj.com/problems/EKO/
+*/
