@@ -57,4 +57,6 @@ int main()
 
 /*
 https://www.spoj.com/problems/PRATA/
+
+Another Same problem: https://www.codingninjas.com/codestudio/problems/cooking-ninjas_1164174
 */
