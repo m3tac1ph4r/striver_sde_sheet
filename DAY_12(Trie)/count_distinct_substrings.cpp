@@ -21,7 +21,8 @@ struct Node
     {
         return (links[ch-'a']!=NULL);
     }
-};    
+};
+
 class Trie
 {
     Node* root;
