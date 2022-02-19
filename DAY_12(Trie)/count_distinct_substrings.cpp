@@ -23,6 +23,7 @@ struct Node
     }
 };
 
+
 class Trie
 {
     Node* root;
