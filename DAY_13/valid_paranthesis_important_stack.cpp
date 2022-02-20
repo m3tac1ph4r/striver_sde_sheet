@@ -49,3 +49,8 @@ int main()
     isValid(expression) == true ? cout << "True"<< "\n": cout << "False"<< "\n" ;
     return 0;
 }
+
+/*
+https://leetcode.com/problems/valid-parentheses/
+https://www.codingninjas.com/codestudio/problems/valid-parenthesis_795104
+*/
