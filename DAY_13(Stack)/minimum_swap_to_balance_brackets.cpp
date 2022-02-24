@@ -22,6 +22,8 @@ int findMinimumCost(string str)
                 myStack.push(str[i]);
         }
     }
+
+    //invalid string
     int openCount=0,closeCount=0;
 
     while(!myStack.empty())
