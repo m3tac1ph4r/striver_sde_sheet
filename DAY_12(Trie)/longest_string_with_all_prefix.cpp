@@ -38,14 +38,7 @@ class Trie
             }
             temp=temp->get(word[i]);
         }
-        if(temp->flag)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return temp->flag;
     }
     bool searchWord(string word)
     {
@@ -74,7 +67,7 @@ class Trie
 };
 string completeString(int n,vector<string> a)
 {
-    int max_len=0,max_pos=-1;
+    int max_len=0;
     string ans="";
     Trie* root=new Trie();
     for(int i=0;i<a.size();i++)
@@ -95,10 +88,7 @@ string completeString(int n,vector<string> a)
             }
         }
     }
-    if(ans=="")
-        return "None";
-    else
-        return ans;
+    return ans==""?"None":ans;
 }    
 int main()
 {
