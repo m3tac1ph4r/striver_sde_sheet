@@ -10,6 +10,7 @@ public:
     {
     public:
         int key, val;
+        //DOUBLY LINKEDLIST
         Node *next;
         Node *prev;
         Node(int _key, int _val)
@@ -83,3 +84,7 @@ int main()
     
     return 0;
 }
+
+/*
+https://leetcode.com/problems/lru-cache/
+*/
