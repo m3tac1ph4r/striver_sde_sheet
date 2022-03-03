@@ -121,3 +121,20 @@ int main()
     return 0;
 }
 
+/*
+https://leetcode.com/problems/maximal-rectangle/
+*/
+
+/*
+Break 2D matrix to 1D matrix
+Like this:
+
+{INPUT}          {SUM OF UPPER NUMBER}
+1 0 1 1 0        1 0 1 1 0
+1 0 1 1 1        2 0 2 2 1   
+1 1 1 1 1        3 1 3 3 2
+1 0 0 1 0        4 0 0 4 0
+
+If matrix[i][j]==1 means bar is present and if matrix[i][j]==0 means bar is not present means 
+we can't take that index for rectangle.
+*/
