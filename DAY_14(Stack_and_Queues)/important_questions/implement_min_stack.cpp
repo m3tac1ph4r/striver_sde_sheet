@@ -104,4 +104,5 @@ Now if pop(){
     We will use 2*min_ele - top() => 2*(-4) -(-5) => -3 which is previous min_ele
 }
 
-Now Stack is:
+Now Stack is:{-3,0,5}
+*/
