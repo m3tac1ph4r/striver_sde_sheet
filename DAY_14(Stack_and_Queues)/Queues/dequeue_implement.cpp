@@ -27,7 +27,9 @@ class Deque
     // Returns true if the deque is full. Otherwise returns false.
     bool isFull()
     {
-        if ((front == 0 and rear == size - 1) or (front != 0 and rear == front - 1))
+        // (front != 0 and rear == front - 1) this means dequeue will be full full when front!=0 and rear==front-1
+        // that is if front=0 and rear=
+        if ((front == 0 and rear == size - 1) or (front != 0 and rear == front - 1)) 
             return true;
         else
             return false;
