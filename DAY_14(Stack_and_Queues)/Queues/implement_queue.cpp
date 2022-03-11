@@ -18,10 +18,10 @@ class Queue
         bool isEmpty()
         {
             if(front==rear)
-                return false;
+                return true;
             else
             {
-                return true;
+                return false;
             }
         }
         void enqueue(int data)
@@ -34,20 +34,15 @@ class Queue
                 {
                     front=0;
                     rear=0;
-                    arr[rear]=data;
-                    rear++;
                 }
-                else
-                {
-                    arr[rear]=data;
-                    rear++;
-                }
+                arr[rear] = data;
+                rear++;
             }
         }
         int dequeue()
         {
             int ans;
-            if(front==rear)
+            if(isEmpty())
                 return -1;
             else
             {
@@ -63,7 +58,7 @@ class Queue
         }
         int qfront()
         {
-            if(front==rear)
+            if(isEmpty())
                 return -1;
             return arr[front];
         }
@@ -73,8 +68,8 @@ int main()
     int size=5;
     Queue* obj=new Queue(size);
     obj->enqueue(1);
-    cout<<"front "<<obj->qfront()<<"\n";
     obj->enqueue(5);
+    cout<<"front "<<obj->qfront()<<"\n";
     obj->enqueue(6);
     obj->enqueue(7);
     cout<<"Dequeue "<<obj->dequeue()<<"\n";
