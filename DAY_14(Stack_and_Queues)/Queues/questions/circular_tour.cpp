@@ -10,7 +10,7 @@ struct petrolPump
 }; 
 int tour(petrolPump p[],int n)
 {
-    int deficit=0;  //kami
+    int deficit=0;  //kami petrol ki
     int balance=0;
     int start=0;
     for(int i=0;i<n;i++)
@@ -42,8 +42,6 @@ int main()
 }
 
 /*
-87  27  40  95  71  96  79  35  2    68   3   98  93 
-18  57  53  81  2   42  87  90  66   20  45   30  41
-
-69  -30 7   21  90  144 136 81  14  65  23    90   143
+https://practice.geeksforgeeks.org/problems/circular-tour/1#
+https://leetcode.com/problems/gas-station/
 */
