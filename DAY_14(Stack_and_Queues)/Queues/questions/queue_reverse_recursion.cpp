@@ -12,7 +12,7 @@ void rev(queue<int> &q)
         int num=q.front();
         q.pop();
         rev(q);
-        q.push(num);
+        q.push(num);    //backtracking step
     }
     
 }
