@@ -29,12 +29,15 @@ int main()
     }
     return 0;
 }
+/*
+https://leetcode.com/problems/rotate-image/
+*/
 
 /*
-1. Firstly transpose the matrix 
+1. Firstly transpose the matrix
 2. Then reverse each row
 
-ORIGINAL MATRIX : 
+ORIGINAL MATRIX :
 
     1 2 3
     4 5 6

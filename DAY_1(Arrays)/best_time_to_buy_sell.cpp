@@ -16,3 +16,7 @@ int main()
     cout<<max_profit;
     return 0;
 }
+
+/*
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+*/
