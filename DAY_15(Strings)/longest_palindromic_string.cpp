@@ -46,5 +46,29 @@ int main()
 }
 
 /*
+https://leetcode.com/problems/longest-palindromic-substring/
 Solved using odd even approach
+*/
+
+/*
+Ex- b a b a d
+    0 1 2 3 4
+
+i=1
+    low=0,high=2
+    start=0,max_len=3
+
+i=2
+    low=1,high=3
+
+
+Ex- c b b d
+    0 1 2 3
+
+i=1
+    low=0,high=1
+
+i=2
+    low=1,high=2
+    start=1,max_len=2
 */
