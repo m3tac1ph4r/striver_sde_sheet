@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 const int M=1e9+7;
 
-int repeatedStringMatch(string a,string b)
+void repeatedStringMatch(string a,string b)
 {
     /*
     a -> pattern
@@ -32,14 +32,12 @@ int repeatedStringMatch(string a,string b)
     }
 
     // Now searching the pattern in text
-    int count=0;
     for(int i=0;i+pat_len-1<text_len;i++)
     {
         long long current_hash=(hash_text[i+pat_len]-hash_text[i]+M)%M;
         if(current_hash==(pattern_hash*power[i])%M)
-            count++;
+            cout<<"Found at index ("<<i<<","<<i+pat_len-1<<")"<<"\n";
     }
-    return count;
     
 }
 int main()
@@ -47,6 +45,12 @@ int main()
     string text,pattern;
     cin>>text;
     cin>>pattern;
-    cout<<repeatedStringMatch(pattern,text);
+    repeatedStringMatch(pattern,text);
     return 0;
 }
+
+/*
+https://www.youtube.com/watch?v=-WdkLyTeZ3Q&ab_channel=ApnaCollege
+
+Must Do Dry For better understanding
+*/
