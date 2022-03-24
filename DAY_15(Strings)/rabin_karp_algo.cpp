@@ -3,15 +3,15 @@ using namespace std;
 #define ll long long
 const int M=1e9+7;
 
-void repeatedStringMatch(string a,string b)
+void repeatedStringMatch(string pat,string text)
 {
     /*
     a -> pattern
     b -> text
     */
     int p=31;
-    int pat_len=a.length();
-    int text_len=b.length();
+    int pat_len=pat.length();
+    int text_len=text.length();
     vector<long long> power(text_len+1);
     vector<long long> hash_text(text_len+1,0);
     long long pattern_hash=0;
@@ -22,13 +22,13 @@ void repeatedStringMatch(string a,string b)
     }
     for(int i=0;i<text_len;i++)
     {
-        hash_text[i+1]=(hash_text[i]+(b[i]-'a'+1)*power[i])%M;
+        hash_text[i+1]=(hash_text[i]+(text[i]-'a'+1)*power[i])%M;
     }
 
     // for finding hash of pattern_text
     for(int i=0;i<pat_len;i++)
     {
-        pattern_hash=(pattern_hash+(a[i]-'a'+1)*power[i])%M;
+        pattern_hash=(pattern_hash+(pat[i]-'a'+1)*power[i])%M;
     }
 
     // Now searching the pattern in text
