@@ -34,7 +34,7 @@ int strStr(string haystack,string needle)
             return i-2*needle.length();
     }
     return -1;
-}    
+}
 int main()
 {
     string haystack,needle;
