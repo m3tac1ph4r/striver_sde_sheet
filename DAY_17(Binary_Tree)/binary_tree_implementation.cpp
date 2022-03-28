@@ -86,6 +86,33 @@ void reverseOrderTraversal(Node *root)
         myStack.pop();
     }
 }
+
+void inorderTraversal(Node* root)
+{
+    if(root==NULL)
+        return;
+    inorderTraversal(root->left);
+    cout<<root->data<<" ";
+    inorderTraversal(root->right);
+}
+
+void preorderTraversal(Node* root)
+{
+    if(root==NULL)
+        return;
+    cout<<root->data<<" ";
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
+}
+
+void postorderTraversal(Node* root)
+{
+    if(root==NULL)
+        return;
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
+    cout<<root->data<<" ";
+}
 int main()
 {
     Node* root;
@@ -95,6 +122,12 @@ int main()
     levelOrderTraversal(root);
     cout << "Printing reverseOrderTraversal " << endl;
     reverseOrderTraversal(root);
+    cout<<"Printing Inoder traversal"<<"\n";
+    inorderTraversal(root);
+    cout<<"Printing Preorder traversal"<<"\n";
+    preorderTraversal(root);
+    cout<<"Printing Postorder traversal"<<"\n";
+    postorderTraversal(root);
+
     return 0;
 }
-
