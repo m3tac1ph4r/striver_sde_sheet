@@ -29,7 +29,6 @@ Node* buildTree(Node* root)
     root->left=buildTree(root->left);
     cout << "Enter data for inserting right of " << data << "\n";
     root->right=buildTree(root->right);
-    
     return root;
 }
 
@@ -117,17 +116,17 @@ int main()
 {
     Node* root;
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    //1 2 4 -1 -1 5 -1 6 -1 -1 3 -1 -1
     root=buildTree(root);
     cout<<"Printing levelOrderTraversal "<<endl;
     levelOrderTraversal(root);
-    cout << "Printing reverseOrderTraversal " << endl;
     reverseOrderTraversal(root);
-    cout<<"Printing Inoder traversal"<<"\n";
+    cout << "Printing reverseOrderTraversal " << endl;
     inorderTraversal(root);
-    cout<<"Printing Preorder traversal"<<"\n";
+    cout<<"Printing Inoder traversal"<<"\n";
     preorderTraversal(root);
-    cout<<"Printing Postorder traversal"<<"\n";
+    cout<<"Printing Preorder traversal"<<"\n";
     postorderTraversal(root);
-
+    cout<<"Printing Postorder traversal"<<"\n";
     return 0;
 }
