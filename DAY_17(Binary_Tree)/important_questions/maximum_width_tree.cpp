@@ -14,7 +14,23 @@ class Node
             left = NULL;
             right = NULL;
     }
-};  
+};
+Node *buildTree(Node *root)
+{
+    int data;
+    // cout << "Enter Data : "<< "\n";
+    cin >> data;
+    root = new Node(data);
+    if (data == -1)
+        return NULL;
+
+    // cout << "Enter data for inserting left of " << data << "\n";
+    root->left = buildTree(root->left);
+    // cout << "Enter data for inserting right of " << data << "\n";
+    root->right = buildTree(root->right);
+    return root;
+}
+
 int widthOfBinaryTree(Node* root) 
 {
     int ans=0;
