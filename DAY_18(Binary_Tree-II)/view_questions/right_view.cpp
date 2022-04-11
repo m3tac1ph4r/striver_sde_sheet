@@ -29,7 +29,7 @@ Node *buildTree(Node *root)
     return root;
 }
 
-vector<int> leftView(Node *root)
+vector<int> rightView(Node *root)
 {
     vector<int> ans;
     if (root == NULL)
@@ -57,7 +57,7 @@ vector<int> leftView(Node *root)
 int main()
 {
     Node *root = buildTree(root);
-    vector<int> ans = leftView(root);
+    vector<int> ans = rightView(root);
     for (auto i : ans)
         cout << i << " ";
     return 0;

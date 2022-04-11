@@ -34,6 +34,7 @@ Node* buildTree(Node* root)
 
 void levelOrderTraversal(Node* root)
 {
+    // LEVEL ORDER TRAVERSAL IS ALSO KNOWN AS DEPTH FIRST SEARCH
     /* for levelOrderTraversal we used a delimenter called NULL
     We will push NULL when the level ends
     like after level 0 (root) we pushed NULL same we will do if we q->front() is NULL and q 
