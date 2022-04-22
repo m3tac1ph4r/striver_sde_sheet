@@ -25,13 +25,16 @@ int zAlgorithm(string s,string p,int n,int m)
         }
         else
         {
+            // we are operating inside box
             int k1 = k - left;
+            // if value does not stretches till right bound then just copy it.
             if (Z[k1] < right - k + 1)
             {
                 Z[k] = Z[k1];
             }
             else
             {
+                // otherwise try to see if there are more matches.
                 left = k;
                 while (right < new_len and new_s[right] == new_s[right - left])
                 {
