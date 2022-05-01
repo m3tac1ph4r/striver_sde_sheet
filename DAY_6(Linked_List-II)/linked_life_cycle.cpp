@@ -58,6 +58,6 @@ int main()
 }
 
 /*
-Using Floyd's Algorithm and Tortoise-Hare Approach
+Using Floyd's Algorithm or Tortoise-Hare Approach
 https://leetcode.com/problems/linked-list-cycle/
 */
