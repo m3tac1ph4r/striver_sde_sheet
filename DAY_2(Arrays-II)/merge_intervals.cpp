@@ -36,3 +36,5 @@ int main()
         cout << s[i].first << " " << s[i].second << endl;
     return 0;
 }
+
+// https://leetcode.com/problems/merge-intervals/
