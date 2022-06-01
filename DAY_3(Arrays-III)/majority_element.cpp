@@ -22,7 +22,7 @@ int main()
 }
 
 /*
-Code Link : https://leetcode.com/problems/majority-element/
+Question Link : https://leetcode.com/problems/majority-element/
 
 Another Code (Using Moore's Voting Algorithm)
 

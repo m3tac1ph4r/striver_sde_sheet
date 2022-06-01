@@ -33,3 +33,5 @@ int main()
     cout<<myPow(x,n);
     return 0;
 }
+
+// https://leetcode.com/problems/powx-n/
