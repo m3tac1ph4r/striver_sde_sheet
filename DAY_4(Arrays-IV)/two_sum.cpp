@@ -3,6 +3,7 @@ using namespace std;
 #define ll long long
 const int M=1e9+7;
 
+// Similar to Sliding window technique
 vector<int> twoSum(vector<int> &nums,int target)
 {
     vector<int> ans(2);
@@ -52,6 +53,20 @@ int main()
     return 0;
 }
 
+// https://leetcode.com/problems/two-sum/
+
 /*
-Similar to Sliding window technique
+USING HASHING
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    unordered_map<int,int> mp;
+    
+    for(int i=0;i<nums.size();i++)
+    {
+        if(mp.find(target-nums[i])!=mp.end())
+            return {i,mp[target-nums[i]]};
+        mp[nums[i]]=i;
+    }
+    return {};
+}
 */
