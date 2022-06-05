@@ -1,11 +1,12 @@
 {
-    "files.associations": {
-        "iostream": "cpp",
-        "vector": "cpp",
-        "array": "cpp",
-        "string": "cpp",
-        "string_view": "cpp",
-        "ranges": "cpp",
-        "span": "cpp"
-    }
+  "files.associations": {
+    "iostream": "cpp",
+    "vector": "cpp",
+    "array": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "new": "cpp"
+  }
 }
