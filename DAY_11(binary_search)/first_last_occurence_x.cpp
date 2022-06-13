@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 
-int firstOccur(vector<int> arr,int n,int x)
+int firstOccur(vector<int> arr, int n, int x)
 {
-    int low = 0, high = n - 1, ans1=-1;
+    int low = 0, high = n - 1, ans1 = -1;
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
@@ -25,14 +25,14 @@ int firstOccur(vector<int> arr,int n,int x)
 }
 int lastOccur(vector<int> arr, int n, int x)
 {
-    int low = 0, high = n - 1, ans2=-1;
+    int low = 0, high = n - 1, ans2 = -1;
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
         if (arr[mid] == x)
         {
             ans2 = mid;
-            low = mid +1;
+            low = mid + 1;
         }
         else if (arr[mid] < x)
         {
@@ -43,23 +43,24 @@ int lastOccur(vector<int> arr, int n, int x)
     }
     return ans2;
 }
-vector<int> firstAndLast(vector<int> &arr,int n,int x)
+vector<int> firstAndLast(vector<int> &arr, int n, int x)
 {
     vector<int> ans;
-    ans.push_back(firstOccur(arr,n,x));
-    if(ans[0]!=-1)
-        ans.push_back(lastOccur(arr,n,x));
+    ans.push_back(firstOccur(arr, n, x));
+    if (ans[0] != -1)
+        ans.push_back(lastOccur(arr, n, x));
     return ans;
+}
 int main()
 {
-    int n,x;
-    cin>>n>>x;
+    int n, x;
+    cin >> n >> x;
     vector<int> arr(n);
-    for(int i=0;i<n;i++)
-        cin>>arr[i];
-    vector<int> ans=firstAndLast(arr,n,x);
-    for(int i=0;i<ans.size();i++)
-        cout<<ans[0]<<" ";
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    vector<int> ans = firstAndLast(arr, n, x);
+    for (int i = 0; i < 2; i++)
+        cout << ans[i] << " ";
     return 0;
 }
 

@@ -1,24 +1,24 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
-    
-int search(vector<int> &nums,int target)
+const int M = 1e9 + 7;
+
+int search(vector<int> &nums, int target)
 {
-    int low=0,high=nums.size()-1;
-    while(low<=high)
+    int low = 0, high = nums.size() - 1;
+    while (low <= high)
     {
-        int mid=(low+high)/2;
-        if(nums[mid]==target)
+        int mid = (low + high) / 2;
+        if (nums[mid] == target)
             return mid;
-        if(nums[low]<=nums[mid])     // check whtther the left array is sorted or not
+        if (nums[low] <= nums[mid]) // check whtther the left array is sorted or not [left,mid]
         {
-            if(target<=nums[mid] and target>=nums[low])
-                high=mid-1;
+            if (target <= nums[mid] and target >= nums[low])
+                high = mid - 1;
             else
-                low=mid+1;
+                low = mid + 1;
         }
-        else
+        else // right part is sorted [mid,high]
         {
             if (target >= nums[mid] and target <= nums[high])
             {
@@ -29,16 +29,16 @@ int search(vector<int> &nums,int target)
         }
     }
     return -1;
-}    
+}
 int main()
 {
-    int n,target;
-    cin>>n;
+    int n, target;
+    cin >> n;
     vector<int> nums(n);
-    for(int i=0;i<n;i++)
-        cin>>nums[i];
-    cin>>target;
-    cout<<search(nums,target);
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
+    cin >> target;
+    cout << search(nums, target);
     return 0;
 }
 
