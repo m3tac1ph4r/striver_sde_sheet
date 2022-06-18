@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 
 struct ListNode
 {
@@ -36,36 +36,36 @@ void display(ListNode *head)
     cout << "\n";
 }
 
-ListNode* removeNthFromEnd(ListNode* head,int n)
+ListNode *removeNthFromEnd(ListNode *head, int n)
 {
-    ListNode* dummy=new ListNode();
-    dummy->next=head;
+    ListNode *dummy = new ListNode();
+    dummy->next = head;
     // dummy= head;
-    ListNode* slow=dummy;
-    ListNode* fast=dummy;
-    for(int i=0;i<n;i++)
+    ListNode *slow = dummy;
+    ListNode *fast = dummy;
+    for (int i = 0; i < n; i++)
     {
-       fast=fast->next; 
+        fast = fast->next;
     }
-    while (fast->next!=NULL)
+    while (fast->next != NULL)
     {
-        fast=fast->next;
-        slow=slow->next;
+        fast = fast->next;
+        slow = slow->next;
     }
-    slow->next=slow->next->next;
+    slow->next = slow->next->next;
     return dummy->next;
 }
 int main()
 {
     int n;
     cin >> n;
-    ListNode* head=new ListNode(1);
-    insertTail(head,2);
+    ListNode *head = new ListNode(1);
+    insertTail(head, 2);
     insertTail(head, 3);
     insertTail(head, 4);
     insertTail(head, 5);
     display(head);
-    ListNode* newhead=removeNthFromEnd(head,n);
+    ListNode *newhead = removeNthFromEnd(head, n);
     display(newhead);
     return 0;
 }
