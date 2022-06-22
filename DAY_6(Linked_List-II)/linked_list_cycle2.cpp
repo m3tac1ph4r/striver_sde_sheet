@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 class ListNode
 {
 public:
@@ -37,7 +37,7 @@ void display(ListNode *head)
     }
     cout << "\n";
 }
-ListNode* detectCycle(ListNode* head)
+ListNode *detectCycle(ListNode *head)
 {
     ListNode *res = NULL;
     ListNode *slow = head;
@@ -60,7 +60,7 @@ ListNode* detectCycle(ListNode* head)
     else
     {
         fast = head;
-        while (fast->next != slow->next)
+        while (fast != slow)
         {
             fast = fast->next;
             slow = slow->next;
@@ -74,7 +74,7 @@ ListNode* detectCycle(ListNode* head)
 }
 int main()
 {
-    ListNode* head=NULL;
+    ListNode *head = NULL;
     return 0;
 }
 

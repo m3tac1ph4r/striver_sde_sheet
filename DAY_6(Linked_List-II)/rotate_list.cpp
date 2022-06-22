@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 class ListNode
 {
 public:
@@ -37,37 +37,38 @@ void display(ListNode *head)
     }
     cout << "\n";
 }
-ListNode* rotateRight(ListNode* head,int k)
+ListNode *rotateRight(ListNode *head, int k)
 {
-    ListNode* curr=head;
-    int count=1;
-    while(curr->next!=NULL)
+    ListNode *curr = head;
+    int count = 1;
+    while (curr->next != NULL)
     {
         count++;
-        curr=curr->next;
+        curr = curr->next;
     }
-    curr->next=head;
-    k=k%count;
-    k=count-k;
-    while(k>0)
+    curr->next = head;
+    k = k % count; // To remove the multiple of k suppose len=5 and k=12
+                   // then 10 rotation will give the same linkedlist.So we have to check for only 2 rotations
+    k = count - k;
+    while (k > 0)
     {
-        curr=curr->next;
+        curr = curr->next;
         k--;
     }
-    head=curr->next;
-    curr->next=NULL;
+    head = curr->next;
+    curr->next = NULL;
     return head;
 }
 int main()
 {
-    ListNode* head=NULL;
-    insertTail(head,1);
-    insertTail(head,2);
+    ListNode *head = NULL;
+    insertTail(head, 1);
+    insertTail(head, 2);
     insertTail(head, 3);
     insertTail(head, 4);
     insertTail(head, 5);
     display(head);
-    ListNode* temp=rotateRight(head,2);
+    ListNode *temp = rotateRight(head, 2);
     display(temp);
     return 0;
 }
