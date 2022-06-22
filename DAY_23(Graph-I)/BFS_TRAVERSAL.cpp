@@ -19,7 +19,7 @@ vector<int> BFS(int vertex, vector<pair<int, int>> edges)
     unordered_map<int, list<int>> adj;
     makeAdjList(adj, edges);
 
-    vector<int> visited(vertex, 0);
+    vector<bool> visited(vertex, false);
     vector<int> ans;
     // this is when you are getting TLE
     // for (int i = 0; i < vertex; i++)
@@ -30,7 +30,7 @@ vector<int> BFS(int vertex, vector<pair<int, int>> edges)
         {
             queue<int> q;
             q.push(i);
-            visited[i] = 1;
+            visited[i] = true;
             while (!q.empty())
             {
                 int node = q.front();
@@ -41,7 +41,7 @@ vector<int> BFS(int vertex, vector<pair<int, int>> edges)
                     if (!visited[j])
                     {
                         q.push(j);
-                        visited[j] = 1;
+                        visited[j] = true;
                     }
                 }
             }
