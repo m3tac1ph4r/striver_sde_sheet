@@ -10,7 +10,7 @@ bool DfsIsCyclic(int node, int parent, vector<bool> &visited, unordered_map<int,
     {
         if (!visited[it])
         {
-            visited[it] = true;
+            // visited[it] = true;
             bool ans = DfsIsCyclic(it, node, visited, adj);
             if (ans == true)
                 return true;
