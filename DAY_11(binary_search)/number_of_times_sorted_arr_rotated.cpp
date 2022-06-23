@@ -9,8 +9,18 @@ int findKRotation(int arr[], int n)
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
-        int prev = (mid + n - 1) % n;
-        int next = (mid + 1) % n;
+        int prev = mid - 1;
+        int next = (mid + 1);
+        if (mid == 0)
+        {
+            prev = n - 1;
+            next = 1;
+        }
+        else if (mid == n - 1)
+        {
+            prev = n - 2;
+            next = 0;
+        }
         if (arr[mid] <= arr[prev] and arr[mid] <= arr[next])
         {
             return mid;

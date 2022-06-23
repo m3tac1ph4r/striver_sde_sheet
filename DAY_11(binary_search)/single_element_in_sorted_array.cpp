@@ -1,45 +1,44 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 
 /*
 Using Binary Search
 */
-int singleNonDuplicate(vector<int> &nums) 
+int singleNonDuplicate(vector<int> &nums)
 {
-    int low=0,high=nums.size()-2;
-    while (low<=high)
+    int low = 0, high = nums.size() - 2;
+    while (low <= high)
     {
-        int mid=(low+high)/2;
-        if(mid%2==0)    // check whether it is left array or not
+        int mid = (low + high) / 2;
+        if (mid % 2 == 0) // check whether it is left array or not
         {
-            if(nums[mid]!=nums[mid+1])
+            if (nums[mid] != nums[mid + 1])
             {
-                high=mid-1;
+                high = mid - 1;
             }
             else
-                low=mid+1;
+                low = mid + 1;
         }
         else
         {
-            if(nums[mid]==nums[mid+1])    // check whether it is right array or not
-                high=mid-1;
+            if (nums[mid] == nums[mid + 1]) // check whether it is right array or not
+                high = mid - 1;
             else
-                low=mid+1;   
+                low = mid + 1;
         }
-        
     }
     return nums[low];
 }
 int main()
 {
     int n;
-    cin>>n;
+    cin >> n;
     vector<int> nums(n);
-    for(int i=0;i<n;i++)
-        cin>>nums[i];
-    cout<<singleNonDuplicate(nums);   
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
+    cout << singleNonDuplicate(nums);
     return 0;
 }
 
