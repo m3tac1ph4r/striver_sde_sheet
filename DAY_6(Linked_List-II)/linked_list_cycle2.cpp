@@ -67,8 +67,6 @@ ListNode *detectCycle(ListNode *head)
         }
         if (fast == slow)
             res = fast;
-        else
-            res = fast->next;
         return res;
     }
 }
