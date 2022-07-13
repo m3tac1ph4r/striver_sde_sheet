@@ -5,10 +5,8 @@ const int M = 1e9 + 7;
 
 int minimumJumps(vector<int> &forbidden, int a, int b, int x)
 {
-
     queue<pair<int, bool>> q;
     unordered_set<int> st(forbidden.begin(), forbidden.end());
-
     st.insert(0);
 
     q.push({0, true});
