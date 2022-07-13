@@ -24,7 +24,7 @@ vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m, vector<pair<pa
     vector<bool> mst(n + 1, false);
     vector<int> parent(n + 1, -1);
 
-    // first int - key[i]  and second int - i
+    // first int -> key[i](distance)  and second int -> i
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     key[1] = 0;
