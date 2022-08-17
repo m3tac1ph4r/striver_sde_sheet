@@ -1,17 +1,17 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-const int M=1e9+7;
+const int M = 1e9 + 7;
 
 class ListNode
 {
-    public:
+public:
     int val;
-    ListNode* next;
+    ListNode *next;
     ListNode(int data)
     {
-        val=data;
-        next=NULL;
+        val = data;
+        next = NULL;
     }
 };
 void insertTail(ListNode *&head, int val)
@@ -40,13 +40,13 @@ void display(ListNode *head)
 }
 
 /*
-This is function will only reverse  k nodes 
+The below function will only reverse  k nodes
 input: 1 2 3 4 5   K=3
 output: 3 2 1 4 5
 */
-ListNode* reverse(ListNode* head,int k,int length)
+ListNode *reverse(ListNode *head, int k, int length)
 {
-    if(length<k)
+    if (length < k)
         return head;
     ListNode *next_p;
     ListNode *prev = NULL;
@@ -64,13 +64,13 @@ ListNode* reverse(ListNode* head,int k,int length)
     }
     if (curr != NULL)
     {
-        head->next = reverse(next_p, k,length-k);
+        head->next = reverse(next_p, k, length - k);
     }
     return prev;
 }
 
 /*
-This is function will reverse less than k nodes also
+The below function will reverse less than k nodes also
 input: 1 2 3 4 5 K=3
 output: 3 2 1 5 4
 */
@@ -97,29 +97,28 @@ ListNode *reverse(ListNode *head, int k)
     return prev;
 }
 
-
 ListNode *reverseKGroup(ListNode *head, int k)
 {
-    ListNode* temp=head;
-    int length=0;
-    while(temp!=NULL)
+    ListNode *temp = head;
+    int length = 0;
+    while (temp != NULL)
     {
         length++;
-        temp=temp->next;
+        temp = temp->next;
     }
-    return reverse(head,k,length);
+    return reverse(head, k, length);
     // return reverse(head, k);
 }
 int main()
 {
-    ListNode* head=NULL;
-    insertTail(head,1);
+    ListNode *head = NULL;
+    insertTail(head, 1);
     insertTail(head, 2);
     insertTail(head, 3);
     insertTail(head, 4);
     insertTail(head, 5);
     display(head);
-    ListNode* temp=reverseKGroup(head,3);
+    ListNode *temp = reverseKGroup(head, 3);
     display(temp);
     return 0;
 }
