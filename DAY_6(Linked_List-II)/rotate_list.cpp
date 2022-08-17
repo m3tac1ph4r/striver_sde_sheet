@@ -40,16 +40,16 @@ void display(ListNode *head)
 ListNode *rotateRight(ListNode *head, int k)
 {
     ListNode *curr = head;
-    int count = 1;
+    int len = 1;
     while (curr->next != NULL)
     {
-        count++;
+        len++;
         curr = curr->next;
     }
     curr->next = head;
-    k = k % count; // To remove the multiple of k suppose len=5 and k=12
-                   // then 10 rotation will give the same linkedlist.So we have to check for only 2 rotations
-    k = count - k;
+    k = k % len; // To remove the multiple of k suppose len=5 and k=12
+                 // then 10 rotation will give the same linkedlist.So we have to check for only 2 rotations
+    k = len - k;
     while (k > 0)
     {
         curr = curr->next;
