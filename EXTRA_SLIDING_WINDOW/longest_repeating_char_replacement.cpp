@@ -18,10 +18,12 @@ public:
             mp[s[right]]++;
             maxFrq = max(maxFrq, mp[s[right]]);
             int currLen = right - left + 1;
-            if (currLen - maxFrq > k)
+            while (currLen - maxFrq > k)
             {
                 mp[s[left]]--;
+                maxFrq = max(maxFrq, mp[s[left]]);
                 left++;
+                currLen = right - left + 1;
             }
             maxLen = max(maxLen, right - left + 1);
             right++;
@@ -37,3 +39,4 @@ int main()
 }
 
 // https://leetcode.com/problems/longest-repeating-character-replacement/
+// https://youtu.be/gqXU1UyA8pk
