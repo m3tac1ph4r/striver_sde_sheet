@@ -52,7 +52,6 @@ ListNode *reverse(ListNode *head, int k, int length)
     ListNode *prev = NULL;
     ListNode *curr = head;
     int c = 0;
-    int count = 0;
     ListNode *temp = head;
     while (curr != NULL and c < k)
     {
